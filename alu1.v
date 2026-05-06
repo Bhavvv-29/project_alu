@@ -67,6 +67,7 @@ else if (ce) begin
 	l <= 1'b0;
 	e <= 1'b0;
 	err <= 1'b0;
+// arithemetic operations 
 	
 	if (mode) begin 
 		case (cmd) 
@@ -75,138 +76,141 @@ else if (ce) begin
 			arith_res=opa+opb;
                         res[data_width-1:0] <= arith_res[data_width-1:0];
                         cout  <= arith_res[data_width];
-                        if (opa>opb) oflow <= 1'b1;
-			else oflow<=1'b0; end 
-			else err <= 1'b0;
+			//oflow<=1'b0;  
+			end 
+			else err <= 1'b1;
                 end
 
                 4'd1: begin // sub unsigned 
 			if (inp_valid==2'b11) begin
                 	arith_res=opa-opb;
                         res[data_width-1:0] <= arith_res[data_width-1:0];
-			cout <= 1'b0;
-                        oflow <=1'b0;
-		end else if (inp_valid !=2'b11) err <= 1'b1;
+			//cout <= 1'b0;
+                        if (opa<opb) oflow <=1'b1;
+			else oflow <=1'b0;
+		end else err <= 1'b1;
 		end
 		
 		4'd2: begin // add with carry 
 			if (inp_valid==2'b11) begin
-			            arith_res=opa+opb+cin;
+			arith_res=opa+opb+cin;
                         res[data_width-1:0] <= arith_res[data_width-1:0];
                         cout  <= arith_res[data_width];
-                        oflow <= 1'b0;
-                        end 
+                        //oflow <= 1'b0;
+                        end
+			else err<=1'b1; 
                        end
 
-		// sub unsigned 
+		// sub unsigned with carry 
 		4'd3: begin
-            if (inp_valid==2'b11) begin
-            arith_res=opa-opb-cin;
-            res[data_width-1:0] <= arith_res[data_width-1:0];
-            cout <= 1'b0;
-		if (opa<opb) oflow <=1'b1;
-		else oflow <=1'b0;
+            		if (inp_valid==2'b11) begin
+            		arith_res=opa-opb-cin;
+            		res[data_width-1:0] <= arith_res[data_width-1:0];
+            		//cout <= 1'b0;
+			if (opa<(opb+cin)) oflow <=1'b1;
+			else oflow <=1'b0;
 		  end
-			else err <= 1'b0;
+			else err <= 1'b1;
 		  end 
 
-		4'd4:begin if (inp_valid[0]==1)res<=opa+1; end //inc a 
-		4'd5:begin if (inp_valid[0]==1)res<=opa-1; end //dec a 
-		4'd6:begin if (inp_valid[1]==1)res<=opb+1; end //inc b 
-		4'd7:begin if (inp_valid[1]==1)res<=opb-1; end //dec b 
-		4'd8:begin if (inp_valid==2'b11)  begin //compare 
-            		//res=(data_width*2)'bz;
-            		if(opa==opb)
-             			begin e<=1'b1;g<=1'b0;l<=1'b0;end
-            		else if(opa>opb)
-             			begin e<=1'b0;g<=1'b1;l<=1'b0;end
-            		else 
-             			begin e<=1'b0;g<=1'b0;l<=1'b1;end
-           		end
-		end 
+		4'd4://inc a 
+			begin
+			if (inp_valid[0]==0) err=1'b1;
+			else res<=opa+1; 
+			end 
+ 
+		4'd5://dec a 
+			begin
+			if (inp_valid[0]==0) err=1'b1;
+			else res<=opa-1;
+			end  
+		4'd6://inc b 
+			begin
+			if (inp_valid[1]==0) err=1'b1;
+			else res<=opb+1; 
+			end 
+		4'd7://dec b 
+			begin 
+			if (inp_valid[1]==0) err=1'b0;
+			res<=opb-1;
+			end  
+
+		4'd8://compare 
+			begin
+			if (inp_valid==2'b11)  begin  
+            			if(opa==opb)
+             				begin e<=1'b1;g<=1'b0;l<=1'b0;end
+            			else if(opa>opb)
+             				begin e<=1'b0;g<=1'b1;l<=1'b0;end
+            			else 
+             				begin e<=1'b0;g<=1'b0;l<=1'b1;end
+           			end
+			else err <= 1'b1;	
+			end 
 		
 
-4'd9: begin/*
-	if (inp_valid ==2'b11) begin 
-		mul_opa=opa+1;
-		mul_opb=opb+1;
-		res<=mul_opa*mul_opb;
-		
-end 
-end */
+		4'd9://inc and multiply 
+		 begin
 	                if (mul_busy==1'b0) begin                    
-                    if (inp_valid==2'b11) begin
-                        mul_opa  <= opa + 1;
-                        mul_opb  <= opb + 1;
-                                      
-                        mul_busy <= 1'b1;
-                        mul_cnt  <= 2'd0;
-                    end
-                end else begin                          
-                    mul_cnt <= mul_cnt + 1;
-                    if (mul_cnt == 2'd2) begin          
-                        res      <= mul_opa * mul_opb;
-                        mul_busy <= 1'b0;
-                        mul_cnt  <= 2'd0;
-                    end
-                end
-            end
+        	        	if (inp_valid==2'b11) begin
+                        	mul_opa  <= opa + 1;
+                        	mul_opb  <= opb + 1;                     
+                        	mul_busy <= 1'b1;
+                        	mul_cnt  <= 2'd0;
+                    		end
+                	end 
+			else begin                          
+                    		mul_cnt <= mul_cnt + 1;
+                    		if (mul_cnt == 2'd2)
+				begin          
+                        	res <= mul_opa * mul_opb;
+                        	mul_busy <= 1'b0;
+                        	mul_cnt  <= 2'd0;
+                    		end
+                	end
+            	end
             
-          /*          
-        4'd10: begin
-            if (inp_valid == 2'b11 && !mul_busy) begin
-                mul_busy <= 1'b1;
-                mul_cnt  <= 2'd0;
-                opa_reg <= opa << 1;
-                opb_reg <= opb;
-                end
-            else if (mul_busy)begin
-                mul_cnt <= mul_cnt + 1;
-                if (mul_cnt == 2'd2) begin
-                res <= opa_reg * opb_reg;
-                mul_busy <= 1'b0;
-                end
-                end
-        end*/
-
-            4'd10: begin
+            4'd10://shift a and multiply 
+		begin
                 if (mul_busy==1'b0) begin                    
-                    if (inp_valid==2'b11) begin
-                        mul_opa  <= opa << 1;          
-                        mul_opb  <= opb;                
-                        
-                        mul_busy <= 1'b1;
-                        mul_cnt  <= 2'd0;
-                    end
-                end else begin                          
-                    mul_cnt <= mul_cnt + 1;
-                    if (mul_cnt == 2'd2) begin
-                        res      <= mul_opa * mul_opb;  
-                        mul_busy <= 1'b0;
-                        mul_cnt  <= 2'd0;
-                    end
-                end
-            end
+                	if (inp_valid==2'b11) begin
+                        	mul_opa  <= opa << 1;          
+                        	mul_opb  <= opb;                
+                        	mul_busy <= 1'b1;
+                        	mul_cnt  <= 2'd0;
+                    	end
+                end 
+		else begin                          
+			mul_cnt <= mul_cnt + 1;
+                	if (mul_cnt == 2'd2) begin
+                        	res <= mul_opa * mul_opb;  
+                        	mul_busy <= 1'b0;
+                        	mul_cnt  <= 2'd0;
+                    		end
+                	end
+            	end
         
 		4'd11://signed addition
 		begin if (inp_valid ==2'b11)
-		begin 
+			begin 
 			arith_res=opa+opb;
 			cout  <= 1'b0;
 		   	res <= {{data_width{1'b0}}, arith_res};
-		  	if ((opa[data_width-1]==opb[data_width-1]) && (arith_res[data_width -1] != opa[data_width-1]))oflow<=1'b1;
+		  	if ((opa[data_width-1]==opb[data_width-1]) && (arith_res[data_width -1] != opa[data_width-1])) 
+				oflow<=1'b1;
 		  	else oflow <= 1'b0;
-		 end 
+		 	end 
 		 end 
 		 
 		4'd12://signed subtraction
 		begin if (inp_valid== 2'b11)
-		begin 
+			begin 
 			arith_res = opa -opb;
 			res <= {{data_width{1'b0}}, arith_res};
-		  	if ((opa[data_width-1]!=opb[data_width-1]) && (arith_res[data_width -1] != opa[data_width-1]))oflow<=1'b1;
+		  	if ((opa[data_width-1]!=opb[data_width-1]) && (arith_res[data_width -1] != opa[data_width-1]))
+				oflow<=1'b1;
 		  	else oflow <= 1'b0;
-		 end
+		 	end
 		end 
 		 
 		default:begin 
@@ -222,19 +226,78 @@ end */
 	end 
 
 	else begin 
+		//logical operations 
 		case (cmd) 
-                4'b0000:begin if (inp_valid ==2'b11) res<={1'b0,opa&opb}; end    // CMD = 0000: AND
-             	4'b0001:begin if (inp_valid ==2'b11) res<={1'b0,~(opa&opb)}; end // CMD = 0001: NAND
-             	4'b0010:begin if (inp_valid ==2'b11) res<={1'b0,opa|opb};  end   // CMD = 0010: OR
-             	4'b0011:begin if (inp_valid ==2'b11) res<={1'b0,~(opa|opb)}; end // CMD = 0011: NOR
-             	4'b0100:begin if (inp_valid ==2'b11) res<={1'b0,opa^opb};   end  // CMD = 0100: XOR
-             	4'b0101:begin if (inp_valid ==2'b11) res<={1'b0,~(opa^opb)}; end // CMD = 0101: XNOR
-             	4'b0110:begin if (inp_valid[0] ==1'b1) res<={1'b0,~opa}; end       // CMD = 0110: NOT_A
-             	4'b0111:begin if (inp_valid[1] ==1'b1) res<={1'b0,~opb};  end    // CMD = 0111: NOT_B
-             	4'b1000:begin if (inp_valid[0] ==1'b1) res<={1'b0,opa>>1};  end   // CMD = 1000: SHR1_A
-             	4'b1001:begin if (inp_valid[0] ==1'b1) res<={1'b0,opa<<1};  end // CMD = 1001: SHL1_A
-             	4'b1010:begin if (inp_valid[1] ==1'b1) res<={1'b0,opb>>1};  end // CMD = 1010: SHR1_B
-             	4'b1011:begin if (inp_valid[1] ==1'b1) res<={1'b0,opb<<1};  end // CMD = 1011: SHL1_B
+                4'b0000://and 
+			begin
+				if (inp_valid ==2'b11) res<={1'b0,opa&opb};
+				else err<=1'b1;
+			end  
+             	
+		4'b0001://nand 
+			begin
+				if (inp_valid ==2'b11) res<={1'b0,~(opa&opb)};
+				else err<=1'b1;
+			end
+             	4'b0010://or 
+			begin 
+				if (inp_valid ==2'b11) res<={1'b0,opa|opb};
+				else err<=1'b1;
+			end 
+
+             	4'b0011://nor 
+			begin
+				if (inp_valid ==2'b11) res<={1'b0,~(opa|opb)}; 
+				else err<=1'b1;
+			end 
+
+             	4'b0100://xor 
+			begin
+				if (inp_valid ==2'b11) res<={1'b0,opa^opb};
+				else err<=1'b1;
+			end  
+
+
+             	4'b0101://xnor 
+			begin
+				if (inp_valid ==2'b11) res<={1'b0,~(opa^opb)};
+				else err<=1'b1;
+			end
+ 
+             	4'b0110://not a 
+			begin 
+				if (inp_valid[0] !=1'b1)err=1'b1;
+				else  res<={1'b0,~opa};
+			 end 
+
+             	4'b0111://not b 
+			begin
+				if (inp_valid[1] !=1'b1) err=1'b1;
+				else res<={1'b0,~opb};
+			end
+
+             	4'b1000://shift right a 
+			begin
+				if (inp_valid[0] !=1'b1)err=1'b1;
+				else res<={1'b0,opa>>1};
+			end
+
+             	4'b1001://shift left a 
+			begin
+				if (inp_valid[0] !=1'b1) err=1'b1;
+				else res<={1'b0,opa<<1};
+			end 
+
+             	4'b1010://shift right b 
+			begin
+				if (inp_valid[1] !=1'b1) err=1'b1;
+				else res<={1'b0,opb>>1};  
+			end
+             	4'b1011://shift left b 
+			begin
+				if (inp_valid[1] !=1'b1) err=1'b1;
+				else res<={1'b0,opb<<1};
+			end
 
 		4'b1100: begin //rotate left 
 		              if (inp_valid == 2'b11) begin
@@ -244,19 +307,19 @@ end */
 		                      res <= {{data_width{1'b0}}, opa};
 		                  else
 		                      res <= {{data_width{1'b0}},(opa << shift) | (opa >> (data_width - shift))};
-                        end
-                     end 
+                        	end
+                     	end 
 
                 4'b1101: begin //rotate right 
-                    if (inp_valid == 2'b11) begin
-                        shift = opb[shift_b-1:0];
-                        err <= |opb[data_width-1:shift_b];
-                        if (shift == 0)
-                            res <= {{data_width{1'b0}},opa};
-                        else
-                        res <= {{data_width{1'b0}},(opa >> shift) | (opa << (data_width - shift))};
-                     end
-                   end
+                    		if (inp_valid == 2'b11) begin
+                        		shift = opb[shift_b-1:0];
+                        		err <= |opb[data_width-1:shift_b];
+                        		if (shift == 0)
+                            			res <= {{data_width{1'b0}},opa};
+                        		else
+                        			res <= {{data_width{1'b0}},(opa >> shift) | (opa << (data_width - shift))};
+                     		end
+                   	end
              
 		default:begin 
 			res <= {(2*data_width){1'b0}};
