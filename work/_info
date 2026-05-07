@@ -9,24 +9,34 @@ z2
 cModel Technology
 Z0 d/fetools/work_area/frontend/Batch_11/Bhavani/project_alu
 T_opt
-!s110 1778005174
-V5NXCoaWUj9i_gIJQcg]:63
-04 3 4 work alu fast 0
-=1-6805caf5892e-69fa34b6-9e2e0-a794
+!s110 1778046074
+VZjKMz9U1O@h;4G?Q1ea3T1
+04 7 4 work alu1_tb fast 0
+=1-6805caf5892e-69fad47a-4972a-3e98b
 Z1 o-quiet -auto_acc_if_foreign -work work
 Z2 tCvgOpt 0
 n@_opt
 Z3 OE;O;10.6c;65
 R0
 T_opt1
-!s110 1778040535
-Ve5O]I6V_3JI;8UO4h<kHP3
-04 7 4 work tb_alu1 fast 0
-=1-6805caf5892e-69fabed7-31768-21e3f
+!s110 1778120666
+VWA[9MTn=L6SoFIEo^Y]M:2
+04 7 4 work alu2_tb fast 0
+=1-6805caf5892e-69fbf7da-82f63-37739
 R1
 R2
 n@_opt1
 R3
+T_opt2
+!s110 1778045805
+V[D@05mo578L0G::R8]9EI2
+04 6 4 work alu_tb fast 0
+=1-6805caf5892e-69fad36d-c7dcb-3d084
+R1
+R2
+n@_opt2
+R3
+R0
 valu
 !s110 1778005170
 !i10b 1
@@ -49,13 +59,13 @@ r1
 Z7 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R2
 valu1
-!s110 1778040495
+!s110 1778045897
 !i10b 1
-!s100 TBSegWX6?G9KG:b:l1nSl0
-IVC;0O4NS>_3T6dX<kWmn83
+!s100 fhC0OAJ]BU=CBa439SUGm3
+IM?=2j[me?;j>;ldBOiBCj2
 R4
 R0
-w1778040493
+w1778045011
 8alu1.v
 Falu1.v
 R5
@@ -63,9 +73,93 @@ R6
 r1
 !s85 0
 31
-!s108 1778040495.000000
+!s108 1778045897.000000
 !s107 alu1.v|
 !s90 alu1.v|
+!i113 0
+R7
+R2
+valu1_tb
+!s110 1778046059
+!i10b 1
+!s100 IRTn<BKU?9WSJX@YReP<C0
+IQeAUJFCUZm5IgZ5j]Ff2o0
+R4
+R0
+w1778046055
+Z8 8alu1_tb.v
+Z9 Falu1_tb.v
+L0 2
+R6
+r1
+!s85 0
+31
+!s108 1778046059.000000
+Z10 !s107 alu1_tb.v|
+Z11 !s90 alu1_tb.v|
+!i113 0
+R7
+R2
+valu2
+!s110 1778120642
+!i10b 1
+!s100 <;IR?z@^DAVFZDcHzT;fL3
+IcOn9oRZ<eEZ[7KKa_P6kS3
+R4
+R0
+w1778120637
+8alu2.v
+Falu2.v
+L0 22
+R6
+r1
+!s85 0
+31
+!s108 1778120642.000000
+!s107 alu2.v|
+!s90 alu2.v|
+!i113 0
+R7
+R2
+valu2_tb
+!s110 1778120654
+!i10b 1
+!s100 elWnTX`g;I8SXk2[ARWYc1
+I_m3Ei^l_j_VkHE6kRJG7U2
+R4
+R0
+w1778120480
+8alu2_tb.v
+Falu2_tb.v
+L0 2
+R6
+r1
+!s85 0
+31
+!s108 1778120654.000000
+!s107 alu2_tb.v|
+!s90 alu2_tb.v|
+!i113 0
+R7
+R2
+valu_tb
+!s110 1778045831
+!i10b 1
+!s100 gn4EcKXzAIjF7lD]lgY^`3
+ITiaoPdX=7?L?ZgOoY;a8d2
+R4
+R0
+w1778045759
+R8
+R9
+L0 2
+R6
+r1
+!s85 0
+31
+!s108 1778045831.000000
+R10
+R11
 !i113 0
 R7
 R2
