@@ -1,17 +1,17 @@
 # **Project README: Parameterized ALU Design & Verification**
 
 ## **Project Overview**
-This project involves the development and rigorous functional verification of a **Parameterized Arithmetic Logic Unit (ALU)**[cite: 281, 286]. Designed as a high-performance computational core, this ALU provides a scalable architecture that allows the data width of operands and results to be easily modified to meet specific hardware requirements without redesigning the underlying logic.
+This project involves the development and rigorous functional verification of a **Parameterized Arithmetic Logic Unit (ALU)**. Designed as a high-performance computational core, this ALU provides a scalable architecture that allows the data width of operands and results to be easily modified to meet specific hardware requirements without redesigning the underlying logic.
 
 ## **Key Features**
-* **Parameterized Scalability:** Operands (`OPA`, `OPB`), results (`RES`), and command width (`CMD`) are all scalable via Verilog parameters[cite: 288, 326].
-* **Dual-Mode Functionality:** Operates as a mathematical engine in **Arithmetic Mode** (`MODE` High) or a bit-level processor in **Logical Mode** (`MODE` Low)[cite: 295, 296, 302].
+* **Parameterized Scalability:** Operands (`OPA`, `OPB`), results (`RES`), and command width (`CMD`) are all scalable via Verilog parameters.
+* **Dual-Mode Functionality:** Operates as a mathematical engine in **Arithmetic Mode** (`MODE` High) or a bit-level processor in **Logical Mode** (`MODE` Low).
 * **Comprehensive Instruction Set:** Supports 28 unique operations, including signed/unsigned arithmetic, complex multi-step math (Multiply-Increment), bitwise logic gates, and advanced data rotations.
-* **Fail-Safe Diagnostics:** A dedicated **ERR** flag triggers to alert the system of invalid operand configurations or out-of-range rotation parameters[cite: 309, 310].
-* **Performance Optimization:** Includes a **Clock Enable (CE)** pin for power gating and uses a **3-cycle operation flow** to ensure data stability[cite: 314, 318, 474].
+* **Fail-Safe Diagnostics:** A dedicated **ERR** flag triggers to alert the system of invalid operand configurations or out-of-range rotation parameters.
+* **Performance Optimization:** Includes a **Clock Enable (CE)** pin for power gating and uses a **3-cycle operation flow** to ensure data stability.
 
 ## **Design Architecture**
-The design follows a synchronous RTL flow utilizing a system clock (`CLK`) and an **active-high asynchronous reset** (`RST`)[cite: 313, 334].
+The design follows a synchronous RTL flow utilizing a system clock (`CLK`) and an **active-high asynchronous reset** (`RST`).
 
 
 
@@ -28,7 +28,7 @@ The design follows a synchronous RTL flow utilizing a system clock (`CLK`) and a
 | **ERR** | Output | 1 | Error flag for invalid instructions or parameters]. |
 
 ## **Timing & Working Flow**
-The ALU operates as a synchronous system with a fixed latency profile[cite: 472]:
+The ALU operates as a synchronous system with a fixed latency profile:
 * **Cycle 1 (Input Phase):** Inputs are sampled on the rising edge of the clock and stored in internal buffers (`r_opa`, `r_opb`, etc.).
 * **Cycle 2 (Operation Phase):** Internal logic processes the selected arithmetic or logical operation.
 * **Cycle 3 (Output Phase):** The final response is driven onto the **RES** bus and status flags are updated for capture.
