@@ -1,0 +1,172 @@
+var g_data = {
+b3:[{dummy:0},
+{anchor:'cvg6',items:[{z:'        if (rst) begin',f:'alu.v',l:'29',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'        if (rst) begin',f:'alu.v',l:'29',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'        end else begin',f:'alu.v',l:'42',h:'429',c:'g'}
+]},
+{anchor:'cvg7',items:[{z:'            if (ce) begin',f:'alu.v',l:'43',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'            if (ce) begin',f:'alu.v',l:'43',h:'428',c:'g'}
+,{cr:'c',t:'A',z:'            if (ce) begin',f:'alu.v',l:'43',h:'1',c:'g'}
+]},
+{anchor:'cvg8',items:[{z:'                if (mode) begin',f:'alu.v',l:'58',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'                if (mode) begin',f:'alu.v',l:'58',h:'361',c:'g'}
+,{cr:'c',t:'E',z:'                end else begin',f:'alu.v',l:'153',h:'67',c:'g'}
+]},
+{anchor:'cvg9',items:[{z:'                    case (cmd)',f:'alu.v',l:'59',c:'G',p:'100.00'}
+,{cr:'c',t:'T',z:'                        0: begin',f:'alu.v',l:'60',h:'25',c:'g'}
+,{cr:'c',t:'T',z:'                        1: begin',f:'alu.v',l:'63',h:'21',c:'g'}
+,{cr:'c',t:'T',z:'                        2: begin',f:'alu.v',l:'66',h:'28',c:'g'}
+,{cr:'c',t:'T',z:'                        3: begin',f:'alu.v',l:'69',h:'8',c:'g'}
+,{cr:'c',t:'T',z:'                        4: res1 <= opa + 1\'b1;',f:'alu.v',l:'72',h:'16',c:'g'}
+,{cr:'c',t:'T',z:'                        5: res1 <= opa - 1\'b1;',f:'alu.v',l:'73',h:'12',c:'g'}
+,{cr:'c',t:'T',z:'                        6: res1 <= opb + 1\'b1;',f:'alu.v',l:'74',h:'16',c:'g'}
+,{cr:'c',t:'T',z:'                        7: res1 <= opb - 1\'b1;',f:'alu.v',l:'75',h:'12',c:'g'}
+,{cr:'c',t:'T',z:'                        8: begin',f:'alu.v',l:'76',h:'16',c:'g'}
+,{cr:'c',t:'T',z:'                        9: begin',f:'alu.v',l:'81',h:'60',c:'g'}
+,{cr:'c',t:'T',z:'                        10: begin',f:'alu.v',l:'110',h:'52',c:'g'}
+,{cr:'c',t:'T',z:'                        11: begin',f:'alu.v',l:'139',h:'56',c:'g'}
+,{cr:'c',t:'T',z:'                        12: begin',f:'alu.v',l:'145',h:'36',c:'g'}
+,{cr:'c',t:'T',z:'                        default: res1 <= 0;',f:'alu.v',l:'151',h:'3',c:'g'}
+]},
+{anchor:'cvg10',items:[{z:'                            case (count)',f:'alu.v',l:'85',c:'G',p:'100.00'}
+,{cr:'c',t:'T',z:'                                2\'d0: begin',f:'alu.v',l:'86',h:'3',c:'g'}
+,{cr:'c',t:'T',z:'                                2\'d1: begin',f:'alu.v',l:'91',h:'32',c:'g'}
+,{cr:'c',t:'T',z:'                                default: begin',f:'alu.v',l:'100',h:'25',c:'g'}
+]},
+{anchor:'cvg11',items:[{z:'                                    if (cmdo != cmd) begin',f:'alu.v',l:'92',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'                                    if (cmdo != cmd) begin',f:'alu.v',l:'92',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'                                    else',f:'alu.v',l:'97',h:'30',c:'g'}
+]},
+{anchor:'cvg12',items:[{z:'                                    if (cmd == cmdo)',f:'alu.v',l:'103',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'                                    if (cmd == cmdo)',f:'alu.v',l:'103',h:'25',c:'g'}
+,{cr:'m',t:'E',z:'                                    else',f:'alu.v',l:'105',h:'0',c:'r'}
+]},
+{anchor:'cvg13',items:[{z:'                            case (count)',f:'alu.v',l:'114',c:'G',p:'100.00'}
+,{cr:'c',t:'T',z:'                                2\'d0: begin',f:'alu.v',l:'115',h:'7',c:'g'}
+,{cr:'c',t:'T',z:'                                2\'d1: begin',f:'alu.v',l:'120',h:'21',c:'g'}
+,{cr:'c',t:'T',z:'                                default: begin',f:'alu.v',l:'129',h:'24',c:'g'}
+]},
+{anchor:'cvg14',items:[{z:'                                    if (cmdo != cmd) begin',f:'alu.v',l:'121',c:'Y',p:'50.00'}
+,{cr:'m',t:'I',z:'                                    if (cmdo != cmd) begin',f:'alu.v',l:'121',h:'0',c:'r'}
+,{cr:'c',t:'E',z:'                                    else',f:'alu.v',l:'126',h:'21',c:'g'}
+]},
+{anchor:'cvg15',items:[{z:'                                    if (cmd == cmdo)',f:'alu.v',l:'132',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'                                    if (cmd == cmdo)',f:'alu.v',l:'132',h:'19',c:'g'}
+,{cr:'c',t:'E',z:'                                    else',f:'alu.v',l:'134',h:'5',c:'g'}
+]},
+{anchor:'cvg16',items:[{z:'                    case (cmd)',f:'alu.v',l:'154',c:'G',p:'100.00'}
+,{cr:'c',t:'T',z:'                        0:       res1 <= opa & opb;',f:'alu.v',l:'155',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                        1:       res1 <= ~(opa & opb);',f:'alu.v',l:'156',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                        2:       res1 <= opa | opb;',f:'alu.v',l:'157',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                        3:       res1 <= ~(opa | opb);',f:'alu.v',l:'158',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                        4:       res1 <= opa ^ opb;',f:'alu.v',l:'159',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                        5:       res1 <= (opa ~^ opb);',f:'alu.v',l:'160',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                        6:       res1 <= ~opa;',f:'alu.v',l:'161',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                        7:       res1 <= ~opb;',f:'alu.v',l:'162',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                        8:       res1 <= opa >> 1;',f:'alu.v',l:'163',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                        9:       res1 <= opa << 1;',f:'alu.v',l:'164',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                        10:      res1 <= opb >> 1;',f:'alu.v',l:'165',h:'5',c:'g'}
+,{cr:'c',t:'T',z:'                        11:      res1 <= opb << 1;',f:'alu.v',l:'166',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                        12:      res1 <= (((1 << width) - 1) & ((opa >> (...',f:'alu.v',l:'167',h:'8',c:'g'}
+,{cr:'c',t:'T',z:'                        13:      res1 <= (((1 << width) - 1) & ((opa << (...',f:'alu.v',l:'168',h:'7',c:'g'}
+,{cr:'c',t:'T',z:'                        default: res1 <= 0;',f:'alu.v',l:'169',h:'3',c:'g'}
+]},
+{anchor:'cvg17',items:[{z:'    assign oflow = rst ? 0 : (',f:'alu.v',l:'176',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'    assign oflow = rst ? 0 : (',f:'alu.v',l:'176',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'        ((mode & (cmd == 11)) & (opa[width-1] == opb[width-1]) & (res1[wi...',f:'alu.v',l:'177',h:'235',c:'g'}
+]},
+{anchor:'cvg18',items:[{z:'    assign cout = rst ? 0 : (',f:'alu.v',l:'183',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'    assign cout = rst ? 0 : (',f:'alu.v',l:'183',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'        (mode & (cmd == 0) & (res1[width])) ||',f:'alu.v',l:'184',h:'217',c:'g'}
+]},
+{anchor:'cvg19',items:[{z:'        if (rst)',f:'alu.v',l:'189',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'        if (rst)',f:'alu.v',l:'189',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'        else',f:'alu.v',l:'194',h:'120',c:'g'}
+]}],
+b5:[{dummy:0},
+{anchor:'cvg6',items:[{z:'        if (rst) begin',f:'alu.v',l:'29',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'        if (rst) begin',f:'alu.v',l:'29',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'        end else begin',f:'alu.v',l:'42',h:'429',c:'g'}
+]},
+{anchor:'cvg7',items:[{z:'            if (ce) begin',f:'alu.v',l:'43',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'            if (ce) begin',f:'alu.v',l:'43',h:'428',c:'g'}
+,{cr:'c',t:'A',z:'            if (ce) begin',f:'alu.v',l:'43',h:'1',c:'g'}
+]},
+{anchor:'cvg8',items:[{z:'                if (mode) begin',f:'alu.v',l:'58',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'                if (mode) begin',f:'alu.v',l:'58',h:'361',c:'g'}
+,{cr:'c',t:'E',z:'                end else begin',f:'alu.v',l:'153',h:'67',c:'g'}
+]},
+{anchor:'cvg9',items:[{z:'                    case (cmd)',f:'alu.v',l:'59',c:'G',p:'100.00'}
+,{cr:'c',t:'T',z:'                        0: begin',f:'alu.v',l:'60',h:'25',c:'g'}
+,{cr:'c',t:'T',z:'                        1: begin',f:'alu.v',l:'63',h:'21',c:'g'}
+,{cr:'c',t:'T',z:'                        2: begin',f:'alu.v',l:'66',h:'28',c:'g'}
+,{cr:'c',t:'T',z:'                        3: begin',f:'alu.v',l:'69',h:'8',c:'g'}
+,{cr:'c',t:'T',z:'                        4: res1 <= opa + 1\'b1;',f:'alu.v',l:'72',h:'16',c:'g'}
+,{cr:'c',t:'T',z:'                        5: res1 <= opa - 1\'b1;',f:'alu.v',l:'73',h:'12',c:'g'}
+,{cr:'c',t:'T',z:'                        6: res1 <= opb + 1\'b1;',f:'alu.v',l:'74',h:'16',c:'g'}
+,{cr:'c',t:'T',z:'                        7: res1 <= opb - 1\'b1;',f:'alu.v',l:'75',h:'12',c:'g'}
+,{cr:'c',t:'T',z:'                        8: begin',f:'alu.v',l:'76',h:'16',c:'g'}
+,{cr:'c',t:'T',z:'                        9: begin',f:'alu.v',l:'81',h:'60',c:'g'}
+,{cr:'c',t:'T',z:'                        10: begin',f:'alu.v',l:'110',h:'52',c:'g'}
+,{cr:'c',t:'T',z:'                        11: begin',f:'alu.v',l:'139',h:'56',c:'g'}
+,{cr:'c',t:'T',z:'                        12: begin',f:'alu.v',l:'145',h:'36',c:'g'}
+,{cr:'c',t:'T',z:'                        default: res1 <= 0;',f:'alu.v',l:'151',h:'3',c:'g'}
+]},
+{anchor:'cvg10',items:[{z:'                            case (count)',f:'alu.v',l:'85',c:'G',p:'100.00'}
+,{cr:'c',t:'T',z:'                                2\'d0: begin',f:'alu.v',l:'86',h:'3',c:'g'}
+,{cr:'c',t:'T',z:'                                2\'d1: begin',f:'alu.v',l:'91',h:'32',c:'g'}
+,{cr:'c',t:'T',z:'                                default: begin',f:'alu.v',l:'100',h:'25',c:'g'}
+]},
+{anchor:'cvg11',items:[{z:'                                    if (cmdo != cmd) begin',f:'alu.v',l:'92',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'                                    if (cmdo != cmd) begin',f:'alu.v',l:'92',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'                                    else',f:'alu.v',l:'97',h:'30',c:'g'}
+]},
+{anchor:'cvg12',items:[{z:'                                    if (cmd == cmdo)',f:'alu.v',l:'103',c:'Y',p:'50.00'}
+,{cr:'c',t:'I',z:'                                    if (cmd == cmdo)',f:'alu.v',l:'103',h:'25',c:'g'}
+,{cr:'m',t:'E',z:'                                    else',f:'alu.v',l:'105',h:'0',c:'r'}
+]},
+{anchor:'cvg13',items:[{z:'                            case (count)',f:'alu.v',l:'114',c:'G',p:'100.00'}
+,{cr:'c',t:'T',z:'                                2\'d0: begin',f:'alu.v',l:'115',h:'7',c:'g'}
+,{cr:'c',t:'T',z:'                                2\'d1: begin',f:'alu.v',l:'120',h:'21',c:'g'}
+,{cr:'c',t:'T',z:'                                default: begin',f:'alu.v',l:'129',h:'24',c:'g'}
+]},
+{anchor:'cvg14',items:[{z:'                                    if (cmdo != cmd) begin',f:'alu.v',l:'121',c:'Y',p:'50.00'}
+,{cr:'m',t:'I',z:'                                    if (cmdo != cmd) begin',f:'alu.v',l:'121',h:'0',c:'r'}
+,{cr:'c',t:'E',z:'                                    else',f:'alu.v',l:'126',h:'21',c:'g'}
+]},
+{anchor:'cvg15',items:[{z:'                                    if (cmd == cmdo)',f:'alu.v',l:'132',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'                                    if (cmd == cmdo)',f:'alu.v',l:'132',h:'19',c:'g'}
+,{cr:'c',t:'E',z:'                                    else',f:'alu.v',l:'134',h:'5',c:'g'}
+]},
+{anchor:'cvg16',items:[{z:'                    case (cmd)',f:'alu.v',l:'154',c:'G',p:'100.00'}
+,{cr:'c',t:'T',z:'                        0:       res1 <= opa & opb;',f:'alu.v',l:'155',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                        1:       res1 <= ~(opa & opb);',f:'alu.v',l:'156',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                        2:       res1 <= opa | opb;',f:'alu.v',l:'157',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                        3:       res1 <= ~(opa | opb);',f:'alu.v',l:'158',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                        4:       res1 <= opa ^ opb;',f:'alu.v',l:'159',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                        5:       res1 <= (opa ~^ opb);',f:'alu.v',l:'160',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                        6:       res1 <= ~opa;',f:'alu.v',l:'161',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                        7:       res1 <= ~opb;',f:'alu.v',l:'162',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                        8:       res1 <= opa >> 1;',f:'alu.v',l:'163',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                        9:       res1 <= opa << 1;',f:'alu.v',l:'164',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                        10:      res1 <= opb >> 1;',f:'alu.v',l:'165',h:'5',c:'g'}
+,{cr:'c',t:'T',z:'                        11:      res1 <= opb << 1;',f:'alu.v',l:'166',h:'4',c:'g'}
+,{cr:'c',t:'T',z:'                        12:      res1 <= (((1 << width) - 1) & ((opa >> (...',f:'alu.v',l:'167',h:'8',c:'g'}
+,{cr:'c',t:'T',z:'                        13:      res1 <= (((1 << width) - 1) & ((opa << (...',f:'alu.v',l:'168',h:'7',c:'g'}
+,{cr:'c',t:'T',z:'                        default: res1 <= 0;',f:'alu.v',l:'169',h:'3',c:'g'}
+]},
+{anchor:'cvg17',items:[{z:'    assign oflow = rst ? 0 : (',f:'alu.v',l:'176',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'    assign oflow = rst ? 0 : (',f:'alu.v',l:'176',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'        ((mode & (cmd == 11)) & (opa[width-1] == opb[width-1]) & (res1[wi...',f:'alu.v',l:'177',h:'235',c:'g'}
+]},
+{anchor:'cvg18',items:[{z:'    assign cout = rst ? 0 : (',f:'alu.v',l:'183',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'    assign cout = rst ? 0 : (',f:'alu.v',l:'183',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'        (mode & (cmd == 0) & (res1[width])) ||',f:'alu.v',l:'184',h:'217',c:'g'}
+]},
+{anchor:'cvg19',items:[{z:'        if (rst)',f:'alu.v',l:'189',c:'G',p:'100.00'}
+,{cr:'c',t:'I',z:'        if (rst)',f:'alu.v',l:'189',h:'2',c:'g'}
+,{cr:'c',t:'E',z:'        else',f:'alu.v',l:'194',h:'120',c:'g'}
+]}],
+dummyEnd:0
+};
+processBranchesData(g_data);

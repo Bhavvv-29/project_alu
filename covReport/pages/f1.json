@@ -1,0 +1,36 @@
+var g_data = {
+f3:{
+scopes:[{link:'z.htm?f=0&s=3',val:'work.alu'}]
+,FSMs:[{dummy:0}
+,{anchor:'cvg22',items:[{c:'G',p:'100.00',z:'count'}
+,{cr:'c',s:'1',z:'st0',h:'321',c:'g'}
+,{cr:'c',z:'st0 -> st1',h:'10',c:'g'}
+,{cr:'c',s:'1',z:'st1',h:'56',c:'g'}
+,{cr:'c',z:'st1 -> st2',h:'51',c:'g'}
+,{cr:'c',z:'st1 -> st0',h:'3',c:'g'}
+,{cr:'c',s:'1',z:'st2',h:'51',c:'g'}
+,{cr:'c',z:'st2 -> st0',h:'7',c:'g'}
+,{cr:'c',z:'st2 -> st1',h:'44',c:'g'}
+]}
+
+],
+},
+f5:{
+scopes:[{s:'4',b:'0',val:'alu_tb'},{link:'z.htm?f=0&s=5',val:'dut'}]
+,FSMs:[{dummy:0}
+,{anchor:'cvg22',items:[{c:'G',p:'100.00',z:'count'}
+,{cr:'c',s:'1',z:'st0',h:'321',c:'g'}
+,{cr:'c',z:'st0 -> st1',h:'10',c:'g'}
+,{cr:'c',s:'1',z:'st1',h:'56',c:'g'}
+,{cr:'c',z:'st1 -> st2',h:'51',c:'g'}
+,{cr:'c',z:'st1 -> st0',h:'3',c:'g'}
+,{cr:'c',s:'1',z:'st2',h:'51',c:'g'}
+,{cr:'c',z:'st2 -> st0',h:'7',c:'g'}
+,{cr:'c',z:'st2 -> st1',h:'44',c:'g'}
+]}
+
+],
+},
+dummyEnd:0
+};
+processFsmData(g_data);

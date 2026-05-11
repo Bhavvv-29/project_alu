@@ -9,54 +9,56 @@ z2
 cModel Technology
 Z0 d/fetools/work_area/frontend/Batch_11/Bhavani/project_alu
 T_opt
-!s110 1778046074
-VZjKMz9U1O@h;4G?Q1ea3T1
-04 7 4 work alu1_tb fast 0
-=1-6805caf5892e-69fad47a-4972a-3e98b
+!s110 1778259887
+VFYE^3fjY[>O2eLE44T9740
+04 3 4 work alu fast 0
+=1-6805caf5892e-69fe17af-a4c8b-e2e4
 Z1 o-quiet -auto_acc_if_foreign -work work
 Z2 tCvgOpt 0
 n@_opt
 Z3 OE;O;10.6c;65
 R0
 T_opt1
-!s110 1778120666
-VWA[9MTn=L6SoFIEo^Y]M:2
-04 7 4 work alu2_tb fast 0
-=1-6805caf5892e-69fbf7da-82f63-37739
+!s110 1778314560
+VnkCzd1cb<Q=9Ob]boQhTn2
+04 7 4 work alu_ref fast 0
+=1-6805caf5892e-69feed40-719b-15edd
 R1
 R2
 n@_opt1
 R3
+R0
 T_opt2
-!s110 1778045805
-V[D@05mo578L0G::R8]9EI2
+!s110 1778318446
+V_jdH8R^=`X5X<h0z9U0HQ0
 04 6 4 work alu_tb fast 0
-=1-6805caf5892e-69fad36d-c7dcb-3d084
+=1-6805caf5892e-69fefc6d-e50f2-1bfc1
 R1
 R2
 n@_opt2
 R3
 R0
 valu
-!s110 1778005170
+!s110 1778340602
 !i10b 1
-!s100 kV8Fn7T5j@NMZO`XjbY4k2
-I=zcFNBMaELUh5feVVF19S0
+!s100 F@mGna:GP=gij8>YLggVh2
+IdcK0gk`zN=nM[O4o=f6jb0
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1778005165
+w1778338297
 8alu.v
 Falu.v
-Z5 L0 23
-Z6 OE;L;10.6c;65
+L0 1
+Z5 OE;L;10.6c;65
 r1
 !s85 0
 31
-!s108 1778005169.000000
+!s108 1778340602.000000
 !s107 alu.v|
-!s90 alu.v|
+!s90 +acc|+cover|-l|alu_log.log|alu.v|
 !i113 0
-Z7 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s102 +cover
+o+acc +cover -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R2
 valu1
 !s110 1778045897
@@ -68,8 +70,8 @@ R0
 w1778045011
 8alu1.v
 Falu1.v
+L0 23
 R5
-R6
 r1
 !s85 0
 31
@@ -77,7 +79,7 @@ r1
 !s107 alu1.v|
 !s90 alu1.v|
 !i113 0
-R7
+Z6 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R2
 valu1_tb
 !s110 1778046059
@@ -87,18 +89,18 @@ IQeAUJFCUZm5IgZ5j]Ff2o0
 R4
 R0
 w1778046055
-Z8 8alu1_tb.v
-Z9 Falu1_tb.v
+8alu1_tb.v
+Falu1_tb.v
 L0 2
-R6
+R5
 r1
 !s85 0
 31
 !s108 1778046059.000000
-Z10 !s107 alu1_tb.v|
-Z11 !s90 alu1_tb.v|
+!s107 alu1_tb.v|
+!s90 alu1_tb.v|
 !i113 0
-R7
+R6
 R2
 valu2
 !s110 1778120642
@@ -111,7 +113,7 @@ w1778120637
 8alu2.v
 Falu2.v
 L0 22
-R6
+R5
 r1
 !s85 0
 31
@@ -119,7 +121,7 @@ r1
 !s107 alu2.v|
 !s90 alu2.v|
 !i113 0
-R7
+R6
 R2
 valu2_tb
 !s110 1778120654
@@ -132,7 +134,7 @@ w1778120480
 8alu2_tb.v
 Falu2_tb.v
 L0 2
-R6
+R5
 r1
 !s85 0
 31
@@ -140,28 +142,49 @@ r1
 !s107 alu2_tb.v|
 !s90 alu2_tb.v|
 !i113 0
-R7
+R6
 R2
-valu_tb
-!s110 1778045831
+valu_ref
+Z7 !s110 1778318435
 !i10b 1
-!s100 gn4EcKXzAIjF7lD]lgY^`3
-ITiaoPdX=7?L?ZgOoY;a8d2
+!s100 dSf^j19]_cfV1<bRWPAoo0
+IhZkQN6N5GV3Dce2hOJC[S2
 R4
 R0
-w1778045759
-R8
-R9
-L0 2
-R6
+w1778253391
+8alu_ref.v
+Falu_ref.v
+L0 5
+R5
 r1
 !s85 0
 31
-!s108 1778045831.000000
-R10
-R11
+Z8 !s108 1778318435.000000
+Z9 !s107 alu.v|alu_ref.v|alu_tb.v|
+Z10 !s90 alu_tb.v|alu_ref.v|alu.v|
 !i113 0
+R6
+R2
+valu_tb
 R7
+!i10b 1
+!s100 BP;_<MzEM`=DXm3LGP5Ca3
+Ib@T1@a[nL_A4IzlQO5`_z0
+R4
+R0
+w1778318408
+8alu_tb.v
+Falu_tb.v
+L0 11
+R5
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R6
 R2
 vtb_alu1
 !s110 1778040530
@@ -174,7 +197,7 @@ w1778040299
 8tb_alu.v
 Ftb_alu.v
 L0 3
-R6
+R5
 r1
 !s85 0
 31
@@ -182,5 +205,5 @@ r1
 !s107 tb_alu.v|
 !s90 tb_alu.v|
 !i113 0
-R7
+R6
 R2
