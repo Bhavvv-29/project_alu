@@ -1,0 +1,85 @@
+# vsim -c alu1_tb 
+# Start time: 14:52:48 on May 26,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.alu1_tb(fast)
+# TIME=0 | mode=0 | cmd=0000 | opa=  0 | opb=  0 | res=    0 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=25000 | mode=1 | cmd=0000 | opa= 10 | opb= 20 | res=    0 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=35000 | mode=1 | cmd=0001 | opa= 40 | opb= 15 | res=    0 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=1
+# TIME=45000 | mode=1 | cmd=0010 | opa= 25 | opb=  5 | res=   30 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=55000 | mode=1 | cmd=0011 | opa= 30 | opb= 10 | res=   25 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=65000 | mode=1 | cmd=0100 | opa= 55 | opb= 10 | res=   31 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=75000 | mode=1 | cmd=0101 | opa= 55 | opb= 10 | res=   19 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=85000 | mode=1 | cmd=0110 | opa= 55 | opb= 99 | res=   56 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=95000 | mode=1 | cmd=0111 | opa= 55 | opb= 99 | res=   54 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=105000 | mode=1 | cmd=1000 | opa= 20 | opb= 20 | res=  100 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=115000 | mode=1 | cmd=1001 | opa=  3 | opb=  4 | res=   98 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=125000 | mode=1 | cmd=1001 | opa=  3 | opb=  4 | res=    0 | cout=0 | oflow=0 | g=0 | e=1 | l=0 | err=0
+# TIME=135000 | mode=1 | cmd=1001 | opa=  3 | opb=  4 | res=    x | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=145000 | mode=1 | cmd=1010 | opa=  2 | opb=  5 | res=   20 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=155000 | mode=1 | cmd=1010 | opa=  2 | opb=  5 | res=    x | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=175000 | mode=1 | cmd=1011 | opa=251 | opb=  3 | res=   20 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=185000 | mode=1 | cmd=1100 | opa=246 | opb=  4 | res=    x | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=195000 | mode=0 | cmd=0000 | opa=170 | opb=204 | res=65534 | cout=0 | oflow=0 | g=0 | e=0 | l=1 | err=0
+# TIME=205000 | mode=0 | cmd=0001 | opa=170 | opb=204 | res=  111 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=215000 | mode=0 | cmd=0010 | opa=170 | opb=204 | res=  136 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=225000 | mode=0 | cmd=0011 | opa=170 | opb=204 | res=  119 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=235000 | mode=0 | cmd=0100 | opa=170 | opb=204 | res=  238 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=245000 | mode=0 | cmd=0101 | opa=170 | opb=204 | res=   17 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=255000 | mode=0 | cmd=0110 | opa=170 | opb=204 | res=  102 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=265000 | mode=0 | cmd=0111 | opa=170 | opb=204 | res=  153 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=275000 | mode=0 | cmd=1000 | opa=240 | opb=204 | res=   85 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=285000 | mode=0 | cmd=1001 | opa= 15 | opb=204 | res=   51 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=295000 | mode=0 | cmd=1010 | opa= 15 | opb=240 | res=  120 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=305000 | mode=0 | cmd=1011 | opa= 15 | opb= 15 | res=   20 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=315000 | mode=0 | cmd=1100 | opa=147 | opb=  2 | res=   20 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=325000 | mode=0 | cmd=1101 | opa=147 | opb=  2 | res=   30 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=335000 | mode=0 | cmd=0000 | opa=147 | opb=  2 | res=   78 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=345000 | mode=1 | cmd=0000 | opa=255 | opb=  1 | res=  228 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=355000 | mode=1 | cmd=0001 | opa=  5 | opb= 10 | res=  228 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=1
+# TIME=365000 | mode=1 | cmd=0010 | opa=255 | opb=  0 | res=    0 | cout=1 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=375000 | mode=1 | cmd=0011 | opa=  0 | opb=  0 | res=65531 | cout=0 | oflow=1 | g=0 | e=0 | l=0 | err=0
+# TIME=385000 | mode=1 | cmd=0100 | opa=255 | opb=  0 | res=65280 | cout=1 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=395000 | mode=1 | cmd=0101 | opa=  0 | opb=  0 | res=65535 | cout=0 | oflow=1 | g=0 | e=0 | l=0 | err=0
+# TIME=405000 | mode=1 | cmd=1000 | opa= 25 | opb= 25 | res=  256 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=415000 | mode=1 | cmd=1000 | opa= 10 | opb= 20 | res=65535 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=425000 | mode=1 | cmd=1001 | opa=255 | opb=255 | res=    0 | cout=0 | oflow=0 | g=0 | e=1 | l=0 | err=0
+# TIME=435000 | mode=1 | cmd=1001 | opa=255 | opb=255 | res=    0 | cout=0 | oflow=0 | g=0 | e=0 | l=1 | err=0
+# TIME=445000 | mode=1 | cmd=1001 | opa=255 | opb=255 | res=    x | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=455000 | mode=1 | cmd=1010 | opa=255 | opb=255 | res=    0 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=465000 | mode=1 | cmd=1010 | opa=255 | opb=255 | res=    x | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=485000 | mode=1 | cmd=1011 | opa=127 | opb=  1 | res=64514 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=495000 | mode=1 | cmd=1011 | opa=128 | opb=255 | res=    x | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=505000 | mode=1 | cmd=1100 | opa=127 | opb=255 | res=65408 | cout=0 | oflow=1 | g=1 | e=0 | l=0 | err=0
+# TIME=515000 | mode=0 | cmd=0000 | opa=255 | opb=255 | res=  127 | cout=0 | oflow=1 | g=0 | e=0 | l=1 | err=0
+# TIME=525000 | mode=0 | cmd=0100 | opa=170 | opb=170 | res=  191 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=1
+# TIME=535000 | mode=0 | cmd=0110 | opa=  0 | opb=170 | res=  255 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=545000 | mode=0 | cmd=1001 | opa=128 | opb=170 | res=    0 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=555000 | mode=0 | cmd=1100 | opa=170 | opb=  0 | res=  255 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=565000 | mode=0 | cmd=1100 | opa=170 | opb=  8 | res=    0 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=575000 | mode=0 | cmd=1100 | opa=170 | opb= 20 | res=  170 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=585000 | mode=1 | cmd=0000 | opa= 10 | opb= 20 | res=  170 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=595000 | mode=0 | cmd=0111 | opa= 10 | opb= 85 | res=65430 | cout=0 | oflow=0 | g=0 | e=0 | l=1 | err=0
+# TIME=605000 | mode=0 | cmd=1100 | opa=170 | opb=  8 | res=65430 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=1
+# TIME=615000 | mode=1 | cmd=0000 | opa= 11 | opb= 22 | res=65430 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=1
+# TIME=635000 | mode=1 | cmd=0000 | opa= 50 | opb= 10 | res=65442 | cout=0 | oflow=0 | g=0 | e=0 | l=1 | err=0
+# TIME=637000 | mode=1 | cmd=0000 | opa= 50 | opb= 10 | res=    0 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# TIME=655000 | mode=1 | cmd=0000 | opa= 50 | opb= 10 | res=    0 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=1
+# TIME=665000 | mode=1 | cmd=0000 | opa= 50 | opb= 10 | res=   60 | cout=0 | oflow=0 | g=0 | e=0 | l=0 | err=0
+# ** Note: $finish    : alu1_tb.v(449)
+#    Time: 697 ns  Iteration: 0  Instance: /alu1_tb
+# End time: 14:52:51 on May 26,2026, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0

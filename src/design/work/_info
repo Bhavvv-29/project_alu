@@ -1,0 +1,71 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/fetools/work_area/frontend/Batch_11/Bhavani/project_alu/src/design
+T_opt
+!s110 1779787148
+VOEB1V[S;JefAz?o>Q0i7F1
+04 4 4 work alu1 fast 0
+=1-6805caf5892e-6a15658c-3a19c-2469f
+Z1 o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+Z3 OE;O;10.6c;65
+R0
+T_opt1
+!s110 1779787369
+VZEKkcRDo?jEMhZUH0k_C>0
+04 7 4 work alu1_tb fast 0
+=1-6805caf5892e-6a156669-2a82e-24dc7
+R1
+R2
+n@_opt1
+R3
+valu1
+!s110 1779787141
+!i10b 1
+!s100 dG60^RDV]W@;Z?V4f=QAM2
+IUD=cJSCHBHbXlDnEboB`@1
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1779787137
+8alu1.v
+Falu1.v
+Z5 L0 24
+Z6 OE;L;10.6c;65
+r1
+!s85 0
+31
+!s108 1779787141.000000
+!s107 alu1.v|
+!s90 alu1.v|
+!i113 0
+Z7 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+valu1_tb
+!s110 1779787352
+!i10b 1
+!s100 ^ZXU4lSK`ec<jTFUzZKcE0
+I4>`Qc>IA?_<E17zT:^3d83
+R4
+R0
+w1779787341
+8alu1_tb.v
+Falu1_tb.v
+R5
+R6
+r1
+!s85 0
+31
+!s108 1779787352.000000
+!s107 alu1_tb.v|
+!s90 alu1_tb.v|
+!i113 0
+R7
+R2
